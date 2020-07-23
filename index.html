@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Employee Directory</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top">
+            <h1>Awesome Startup Employee Directory</h1>
+            <div class="search">
+                <label for="searchName">Search for employee:</label>
+                <input type="text" id="searchName">
+            </div>
+        </div>
+            <main class="grid-container">
+                <!-- Content from API goes here -->
+            </main>
+
+            <div class="overlay hidden">
+                <div class="modal">
+                    <button class="modal-close">X</button>
+                    <button class="previous">&#60;</button>
+                    <button class="next">&#62;</button>
+                    <div class="modal-content">
+                        <!-- Content from API goes here -->
+                    </div>
+                </div>
+            </div>
+
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>

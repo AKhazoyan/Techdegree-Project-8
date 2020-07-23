@@ -1,0 +1,202 @@
+// Main Styles
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: #f1f3f5;
+}
+
+.top {
+    margin: 24px;
+    margin-bottom: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    font-size: 24px;
+}
+
+.search {
+    text-align: center;
+
+    label {
+        display: block;
+    }
+
+    input {
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+}
+
+
+
+// Directory Card Styles
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    padding: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    padding: 24px 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: auto;
+    width: 100%;
+    max-width: 350px;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 160px;
+    margin: auto;
+}
+
+.text-container {
+    width: 100%;
+}
+
+h2, 
+p {
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+p {
+    color: gray;
+    width: 100%;
+}
+
+// Modal
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    padding: 24px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 15% auto auto;
+    width: 95%;
+    max-width: 500px;
+
+    .modal-close,
+    .next, 
+    .previous {
+        position: absolute;
+        right: 1%;
+        top: 50%; 
+        cursor: pointer; 
+        width: 32px;
+        height: 32px;
+    }
+
+    .modal-close {
+        top: 1%;     
+    }
+
+    .previous{
+        left: 1%;
+        right: 0;
+    }
+
+    h2, p {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.modal-content img {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+@media (min-width: 768px) {
+    .search label {
+        display: inline;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .card {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 24px;
+        width: 100%;
+        max-width: none;
+
+        .avatarWrapper{
+            display: flex;
+            align-items: center;
+            width: 100px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-container {
+            width: calc(100% - 124px);
+        }
+    }
+
+    h2, 
+    p {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+
+    .search {
+        margin: auto 0;
+    }
+
+    .grid-container {
+        padding-top: 12px;
+    }
+}
