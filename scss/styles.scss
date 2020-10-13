@@ -36,6 +36,12 @@ h1 {
     }
 }
 
+.searchfield {
+    text-align: center;
+    padding: 8px;
+    margin-top: 8px;
+}
+
 
 
 // Directory Card Styles
@@ -60,12 +66,19 @@ h1 {
     margin: auto;
     width: 100%;
     max-width: 350px;
+    cursor: pointer;
+    transition: box-shadow .3s linear;
+}
+
+.card:hover {
+    box-shadow: 0 0 8px #888888;;
 }
 
 .avatar {
     border-radius: 50%;
     height: 160px;
     margin: auto;
+    filter: grayscale(100%);
 }
 
 .text-container {
@@ -115,6 +128,18 @@ p {
         cursor: pointer; 
         width: 32px;
         height: 32px;
+        border: none;
+        background-color: white;
+    }
+
+    .modal-close:hover{
+        font-weight: bold;
+    }
+    .next:hover{
+        font-weight: bold;
+    }
+    .previous:hover{
+        font-weight: bold;
     }
 
     .modal-close {
@@ -129,6 +154,15 @@ p {
     h2, p {
         text-align: center;
         justify-content: center;
+    }
+}
+
+.text-container #contlink {
+    color: gray;
+    
+    &:hover {
+        color: black;
+        border-color: black;
     }
 }
 
@@ -149,6 +183,12 @@ p {
 @media (min-width: 768px) {
     .search label {
         display: inline;
+    }
+
+    .searchfield {
+        text-align: left;
+        font-size: unset;
+        margin-top: 0;
     }
 
     .grid-container {
@@ -194,6 +234,10 @@ p {
 
     .search {
         margin: auto 0;
+    }
+
+    .searchfield {
+        padding: 12px;
     }
 
     .grid-container {

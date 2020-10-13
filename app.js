@@ -33,6 +33,7 @@ function displayEmployees(employeeData) {
         let name = employee.name;
         let email = employee.email;
         let city = employee.location.city;
+        let state = employee.location.state;
         let picture = employee.picture;
     
         employeeHTML += `
@@ -42,8 +43,7 @@ function displayEmployees(employeeData) {
                 </div>
                 <div class="text-container">
                     <h2 class="name">${name.first} ${name.last}</h2>
-                    <p class="email">${email}</p>
-                    <p class="address">${city}</p>
+                    <p class="address">${city}, ${state}</p>
                 </div>
             </div>
         `  
@@ -65,10 +65,8 @@ function displayModal(index) {
         <img class="avatar" src="${picture.large}" />
         <div class="text-container">
             <h2 class="name">${name.first} ${name.last}</h2>
-            <p class="email">${email}</p>
-            <p class="address">${city}</p>
-            <hr />
-            <p>${phone}</p>
+            <a class="email" id="contlink" href="mailto:${name.first}.${name.last}@example.com">${email}</a>
+            <p><a id="contlink" href="tel:${phone}">${phone}</a></p>
             <p class="address">${street.number} ${street.name} ${city}, ${state} ${postcode}</p>
             <p>Birthday: ${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}</p>
         </div>
