@@ -11,6 +11,40 @@ body {
     background-color: #f1f3f5;
 }
 
+//Banner
+.portfolioLinkHeader {
+    background-color: #CD5C5C;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  #profileProjectName {
+    font-weight: bold;
+  }
+  
+  .portfolioLink {
+    color: white;
+    display: inline-block;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+  }
+  
+  .portfolioLink:hover {
+    border-color: black;
+  }
+  
+  .portfolioLinkHeader a:hover {
+    color: black;
+  }
+  
+  .portfolioLinkHeader p{
+    margin: 0;
+    display: inline;
+    color: white;
+    white-space: unset;
+  }
+
 .top {
     margin: 24px;
     margin-bottom: 0;
